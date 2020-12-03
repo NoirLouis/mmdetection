@@ -70,7 +70,7 @@ def cvt_annotations(devkit_path, years, split, out_file):
     annotations = []
     for year in years:
         filelist = osp.join(devkit_path,
-                            f'VOC{year}/ImageSets/Main/{split}.txt')
+                            f'VOC{year}/ImageSets/Segmentation/{split}.txt')
         if not osp.isfile(filelist):
             print(f'filelist does not exist: {filelist}, '
                   f'skip voc{year} {split}')
