@@ -36,6 +36,7 @@ class RPNHead(RPNTestMixin, AnchorHead):
 
     def forward_single(self, x):
         """Forward feature map of a single scale level."""
+        
         x = self.rpn_conv(x)
         x = F.relu(x, inplace=True)
         rpn_cls_score = self.rpn_cls(x)
